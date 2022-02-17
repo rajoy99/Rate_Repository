@@ -1,10 +1,22 @@
-import { FlatList, View, StyleSheet } from 'react-native';
+import { FlatList, Text,View, StyleSheet } from 'react-native';
+
+import RepositoryItem from './RepositoryItem'
+
 
 const styles = StyleSheet.create({
   separator: {
     height: 10,
+
   },
+  list:{
+      padding:20,
+      backgroundColor: "orange",
+      borderWidth: 1,
+      borderColor: "#fff",
+  }
 });
+
+
 
 const repositories = [
   {
@@ -57,19 +69,12 @@ const ItemSeparator = () => <View style={styles.separator} />;
 
 const RepositoryList = () => {
   return (
-    <FlatList
+    <FlatList 
+      style={styles.list}
       data={repositories}
       ItemSeparatorComponent={ItemSeparator}
-      renderItem={({ item, index, separators }) => (
-        <TouchableHighlight
-          key={item.key}
-          onPress={() => this._onPress(item)}
-          onShowUnderlay={separators.highlight}
-          onHideUnderlay={separators.unhighlight}>
-          <View style={{ backgroundColor: 'white' }}>
-            <Text>{item.title}</Text>
-          </View>
-        </TouchableHighlight>
+      renderItem={({ item }) => (
+            <RepositoryItem id={item.id} fullName={item.fullName} language={item.language} stargazersCount={item.stargazersCount} />
       )}
       // other props
     />
