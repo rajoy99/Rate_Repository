@@ -74,7 +74,8 @@ const RepositoryList = () => {
       data={repositories}
       ItemSeparatorComponent={ItemSeparator}
       renderItem={({ item }) => (
-            <RepositoryItem id={item.id} fullName={item.fullName} language={item.language} stargazersCount={item.stargazersCount} />
+            <RepositoryItem id={item.id} fullName={item.fullName} language={item.language} stargazersCount={item.stargazersCount}
+            ownerAvatarUrl={item.ownerAvatarUrl} />
       )}
       // other props
     />
