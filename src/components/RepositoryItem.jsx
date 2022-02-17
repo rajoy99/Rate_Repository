@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
 
   },
   item:{
-    backgroundColor:'#ff02',
-    flexDirection:'column',
+    backgroundColor:'#af4',
+    justifyContent:'center',
     flexGrow:20
   }
 });
