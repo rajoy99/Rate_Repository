@@ -1,6 +1,8 @@
 import Constants from 'expo-constants';
-import { Text, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import RepositoryList from './RepositoryList';
+import Text from './Text';
+
 
 const styles = StyleSheet.create({
   container: {
@@ -8,12 +10,41 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexShrink: 1,
   },
+  flexContainer: {
+    display: 'flex',
+  },
+  flexItemA: {
+    flexGrow: 10,
+    backgroundColor: '#faa',
+  },
+  flexItemB: {
+    flexGrow: 10,
+    backgroundColor: 'blue',
+  }
 });
+
+
+
+const FlexboxExample = () => {
+  return (
+    <View style={styles.flexContainer}>
+      <View style={styles.flexItemA}>
+        <Text>Flex item A</Text>
+      </View>
+      <View style={styles.flexItemB}>
+        <Text>Flex item B</Text>
+      </View>
+    </View>
+  );
+};
 
 const Main = () => {
   return (
     <View style={styles.container}>
+
+      <FlexboxExample />
       <Text>Rate Repository Application</Text>
+      <Text color="textSecondary">Text with secondary color</Text>
       <RepositoryList />
     </View>
     

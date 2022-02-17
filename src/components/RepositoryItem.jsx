@@ -6,7 +6,9 @@ const styles = StyleSheet.create({
 
   },
   item:{
-    backgroundColor:'#ff02'
+    backgroundColor:'#ff02',
+    flexDirection:'column',
+    flexGrow:20
   }
 });
 
