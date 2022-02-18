@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   list:{
       padding:20,
-      backgroundColor: "orange",
+      backgroundColor: "gray",
       borderWidth: 1,
       borderColor: "#fff",
   }
