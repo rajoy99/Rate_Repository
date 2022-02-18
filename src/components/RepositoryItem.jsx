@@ -23,8 +23,26 @@ const Box =({k,value}) =>{
     )
 
 }
+
+const DesBox =({ownerAvatarUrl,fullName,description}) =>{
+
+  return(
+    <View style={{padding:10,flexDirection:'row'}}>
+      <Image
+        key={id}
+        style={{ left:4, top: 5, width: 35, height: 35,marginRight:20 }}
+        source={{ uri: ownerAvatarUrl }}
+      />
+
+      <Text>{fullName} </Text>
+    </View>
+  )
+
+}
+
 const RepositoryItem = ({
   fullName,
+  description,
   language,
   id,
   stargazersCount,
@@ -35,15 +53,8 @@ const RepositoryItem = ({
 }) => {
   return (
     <View style={styles.item}>
-      <Text> Dev ID : {id}</Text>
-      <Image
-        key={id}
-        style={{ left: 25, top: 5, width: 35, height: 35 }}
-        source={{ uri: ownerAvatarUrl }}
-      />
-
-      <Text> Dev Name : {fullName} </Text>
-      <Text numberOfLines={1} style={{flex:1}}>Favorite Language : </Text>
+      <DesBox ownerAvatarUrl={ownerAvatarUrl} description={description} fullName={fullName} />
+      <Text style={{marginLeft:9}}>{description} </Text>
       <Text
         style={{
           borderRadius: 8,
@@ -55,7 +66,8 @@ const RepositoryItem = ({
           elevation: 5,
           backgroundColor:'blue',
           color:'white',
-          textAlign:'center'
+          textAlign:'center',
+          marginLeft:7
 
         }}
       >

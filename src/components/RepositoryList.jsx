@@ -78,13 +78,14 @@ const RepositoryList = () => {
       renderItem={({ item }) => (
         <RepositoryItem
           id={item.id}
+          description={item.description}
           fullName={item.fullName}
           language={item.language}
           stargazersCount={formatter(item.stargazersCount)}
           ownerAvatarUrl={item.ownerAvatarUrl}
           forksCount={formatter(item.forksCount)}
           ratingAverage={item.ratingAverage}
-          reviewCount={formatter(item.reviewCount)}
+          reviewCount={item.reviewCount}
         />
       )}
       // other props
