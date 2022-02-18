@@ -4,7 +4,7 @@ import RepositoryList from './RepositoryList';
 import Text from './Text';
 import AppBar from './AppBar';
 import { NativeRouter } from 'react-router-native';
-import { Route, Routes, Navigate } from 'react-router-native';
+import { Link, Route, Routes, Navigate } from 'react-router-native';
 import SignIn from './SignIn';
 
 const styles = StyleSheet.create({
