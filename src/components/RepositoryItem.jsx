@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const Box =({value}) =>{
+const Box =({k,value}) =>{
 
     return(
       <View style={{padding:10}}>
         <Text>{value}</Text>
-        <Text>Stars</Text> 
+        <Text>{k}</Text> 
       </View>
     )
 
@@ -29,6 +29,9 @@ const RepositoryItem = ({
   id,
   stargazersCount,
   ownerAvatarUrl,
+  forksCount,
+  ratingAverage,
+  reviewCount
 }) => {
   return (
     <View style={styles.item}>
@@ -59,10 +62,11 @@ const RepositoryItem = ({
         {language}{" "}
       </Text>
       {/* <Text>Stars : {stargazersCount} </Text> */}
-      <View style={{display:flex,flexGrow:row}}>
-      <Box value={stargazersCount}/>
-      <Box value={stargazersCount}/>
-      <Box value={stargazersCount}/>
+      <View style={{flexDirection:'row'}}>
+      <Box k={'Stars'} value={stargazersCount}/>
+      <Box k={'forks'} value={forksCount}/>
+      <Box k={'review'} value={reviewCount}/>
+      <Box k={'rating'} value={ratingAverage}/>
       </View>
     </View>
   );
