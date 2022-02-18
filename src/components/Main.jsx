@@ -1,11 +1,12 @@
-import Constants from 'expo-constants';
-import { StyleSheet, View } from 'react-native';
-import RepositoryList from './RepositoryList';
-import Text from './Text';
-import AppBar from './AppBar';
-import { NativeRouter } from 'react-router-native';
-import { Link, Route, Routes, Navigate } from 'react-router-native';
-import SignIn from './SignIn';
+import Constants from "expo-constants";
+import { StyleSheet, View } from "react-native";
+import RepositoryList from "./RepositoryList";
+import Text from "./Text";
+import AppBar from "./AppBar";
+import { NativeRouter } from "react-router-native";
+import { Link, Route, Routes, Navigate } from "react-router-native";
+import SignIn from "./SignIn";
+import { Switch } from "react-native-web";
 
 const styles = StyleSheet.create({
   container: {
@@ -13,19 +14,17 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   flexContainer: {
-    display: 'flex',
+    display: "flex",
   },
   flexItemA: {
     flexGrow: 10,
-    backgroundColor: '#faa',
+    backgroundColor: "#faa",
   },
   flexItemB: {
     flexGrow: 10,
-    backgroundColor: 'blue',
-  }
+    backgroundColor: "blue",
+  },
 });
-
-
 
 const FlexboxExample = () => {
   return (
@@ -44,13 +43,14 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-      <Routes>
-        <Route path="/" element={<RepositoryList />} exact />
-        <Route path='/signin' element={<SignIn/>} exact />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <Switch>
+        <Routes>
+          <Route path="/" element={<RepositoryList />} exact />
+          <Route path="/signin" element={<SignIn />} exact />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Switch>
     </View>
-    
   );
 };
 
