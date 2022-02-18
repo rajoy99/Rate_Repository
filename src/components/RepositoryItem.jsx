@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const Box =({key,value}) =>{
+const Box =({value}) =>{
 
     return(
-      <View>
+      <View style={{padding:10}}>
         <Text>{value}</Text>
-        <Text>{key}</Text> 
+        <Text>Stars</Text> 
       </View>
     )
 
@@ -59,7 +59,11 @@ const RepositoryItem = ({
         {language}{" "}
       </Text>
       {/* <Text>Stars : {stargazersCount} </Text> */}
-      <Box key={"Stars"} value={stargazersCount}/>
+      <View style={{display:flex,flexGrow:row}}>
+      <Box value={stargazersCount}/>
+      <Box value={stargazersCount}/>
+      <Box value={stargazersCount}/>
+      </View>
     </View>
   );
 };
