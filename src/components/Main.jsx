@@ -3,7 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import RepositoryList from './RepositoryList';
 import Text from './Text';
 import AppBar from './AppBar';
-
+import { NativeRouter } from 'react-router-native';
+import { Route, Routes, Navigate } from 'react-router-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -42,9 +43,10 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-      <Text>Rate Repository Application</Text>
-      <Text color="textSecondary">Text with secondary color</Text>
-      <RepositoryList />
+      <Routes>
+        <Route path="/" element={<RepositoryList />} exact />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </View>
     
   );
