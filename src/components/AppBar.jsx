@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
 
 const AppBar = () => {
   return (
-    <View >
-      <Link to="/signin"> Sign In Page</Link>
+    <View style={styles.container}>
+      <Text> Great News</Text>
     </View>
   );
 };

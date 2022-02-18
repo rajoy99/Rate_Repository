@@ -6,7 +6,7 @@ import AppBar from "./AppBar";
 import { NativeRouter } from "react-router-native";
 import { Link, Route, Routes, Navigate } from "react-router-native";
 import SignIn from "./SignIn";
-import { Switch } from "react-native-web";
+
 
 const styles = StyleSheet.create({
   container: {
@@ -43,13 +43,11 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-      <Switch>
         <Routes>
           <Route path="/" element={<RepositoryList />} exact />
           <Route path="/signin" element={<SignIn />} exact />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </Switch>
     </View>
   );
 };
