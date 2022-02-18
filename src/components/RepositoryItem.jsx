@@ -29,7 +29,6 @@ const DesBox =({ownerAvatarUrl,fullName,description}) =>{
   return(
     <View style={{padding:10,flexDirection:'row'}}>
       <Image
-        key={id}
         style={{ left:4, top: 5, width: 35, height: 35,marginRight:20 }}
         source={{ uri: ownerAvatarUrl }}
       />
