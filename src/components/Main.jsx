@@ -49,13 +49,13 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <AppBar />
-        <Routes>
-          <Route path="/" element={<RepositoryList />} exact />
-          <Route path="/signin" element={<SignIn />} exact />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<RepositoryList />} exact />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </View>
   );
 };
+
 
 export default Main;

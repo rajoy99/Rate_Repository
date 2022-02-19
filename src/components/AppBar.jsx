@@ -18,7 +18,9 @@ const styles = StyleSheet.create({
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <Text> Great News</Text>
+      <Pressable onPress={()=>5}>
+          Repo List
+      </Pressable>
     </View>
   );
 };
