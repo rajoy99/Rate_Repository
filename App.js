@@ -12,8 +12,7 @@ const App = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Screen name="repolist" component={RepositoryList} />
-        <Stack.Screen name="signin" component={SignIn} />
+        <Main />
       </NavigationContainer>
       <StatusBar style="auto" />
     </>
