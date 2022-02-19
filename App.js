@@ -11,12 +11,13 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <>
-      <NavigationContainer>
+      <NativeRouter>
         <Main />
-      </NavigationContainer>
+      </NativeRouter>
       <StatusBar style="auto" />
     </>
   );
 };
+
 
 export default App;
