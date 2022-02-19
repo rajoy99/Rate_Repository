@@ -1,6 +1,7 @@
-import { Pressable,Text, View, StyleSheet } from "react-native";
+import { Pressable,Text, View, StyleSheet, TouchableWithoutFeedback} from "react-native";
 import Constants from "expo-constants";
 import { Link, Route, Routes, Navigate } from 'react-router-native';
+import Subheading from "./Subheading";
 
 const styles = StyleSheet.create({
   container: {
