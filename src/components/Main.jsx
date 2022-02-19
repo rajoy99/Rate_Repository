@@ -40,7 +40,7 @@ const FlexboxExample = () => {
 };
 
 
-const Tab= createBottomTabNavigator();
+
 
 
 

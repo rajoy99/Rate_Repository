@@ -15,12 +15,26 @@ const styles = StyleSheet.create({
   // ...
 });
 
+const AppBarTab = ({ children, link, onPress }) => (
+  <Link
+    onPress={onPress}
+    to={link}
+    component={TouchableWithoutFeedback}
+    activeOpacity={0.8}
+  >
+    <Subheading style={styles.tab} color="textLight">
+      {children}
+    </Subheading>
+  </Link>
+);
+
+
+
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <Pressable onPress={()=>5}>
-          Repo List
-      </Pressable>
+      <AppBarTab link="/">Repositories</AppBarTab>
+        <AppBarTab link="/signin">Sign in</AppBarTab>
     </View>
   );
 };
