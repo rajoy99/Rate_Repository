@@ -1,17 +1,28 @@
-import { Pressable,Text, ScrollView, View, StyleSheet, TouchableWithoutFeedback} from "react-native";
+import {
+  Pressable,
+  Text,
+  ScrollView,
+  View,
+  StyleSheet,
+  TouchableWithoutFeedback,
+} from "react-native";
 import Constants from "expo-constants";
-import { Link, Route, Routes, Navigate } from 'react-router-native';
+import { Link, Route, Routes, Navigate } from "react-router-native";
 import Subheading from "./Subheading";
 
 const styles = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight,
-    backgroundColor:'#24292e',
-    flexGrow:1,
-    flexDirection:'row',
-    justifyContent:'space-between',
-    marginBottom:10
+    backgroundColor: "#24292e",
+    flexGrow: 2,
+    flexDirection: "row",
+    marginBottom: 10,
     // ...
+  },
+  tab: {
+    paddingRight: 15,
+    backgroundColor: "green",
+    color: "white",
   },
   // ...
 });
@@ -29,15 +40,13 @@ const AppBarTab = ({ children, link, onPress }) => (
   </Link>
 );
 
-
-
 const AppBar = () => {
   return (
-    <View style={styles.container}>
- <ScrollView>
- <AppBarTab link="/">Repositories</AppBarTab>
+    <View>
+      <ScrollView style={styles.container}>
+        <AppBarTab link="/">Repositories</AppBarTab>
         <AppBarTab link="/signin">Sign in</AppBarTab>
- </ScrollView>
+      </ScrollView>
     </View>
   );
 };

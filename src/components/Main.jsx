@@ -48,7 +48,7 @@ const FlexboxExample = () => {
 const Main = () => {
   return (
     <View style={styles.container}>
-      <AppBar />
+      <AppBar/>
       <Routes>
         <Route path="/" element={<RepositoryList />} exact />
         <Route path="*" element={<Navigate to="/" replace />} />
