@@ -1,4 +1,4 @@
-import { Pressable,Text, View, StyleSheet, TouchableWithoutFeedback} from "react-native";
+import { Pressable,Text, ScrollView, View, StyleSheet, TouchableWithoutFeedback} from "react-native";
 import Constants from "expo-constants";
 import { Link, Route, Routes, Navigate } from 'react-router-native';
 import Subheading from "./Subheading";
@@ -34,8 +34,10 @@ const AppBarTab = ({ children, link, onPress }) => (
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <AppBarTab link="/">Repositories</AppBarTab>
+ <ScrollView>
+ <AppBarTab link="/">Repositories</AppBarTab>
         <AppBarTab link="/signin">Sign in</AppBarTab>
+ </ScrollView>
     </View>
   );
 };
